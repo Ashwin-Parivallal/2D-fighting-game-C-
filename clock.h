@@ -12,10 +12,7 @@ public:
   unsigned int getSeconds() const { return getTicks()/1000;  }
   unsigned int getFrameRate() const  { return frameRate;  }
   
-  //Disabled ctors
-  Clock() = delete;
-  Clock(const Clock&) = delete;
-  Clock&operator=(const Clock&) = delete;
+
   
   
 private:
@@ -56,4 +53,9 @@ private:
   void pause();
   void unpause();
   void display() const;
+
+  //Disabled ctors
+  Clock();
+  Clock(const Clock&);
+  Clock&operator=(const Clock&);
 };
